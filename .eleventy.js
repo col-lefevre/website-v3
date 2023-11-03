@@ -11,6 +11,9 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy("./src/assets/js");
     eleventyConfig.addWatchTarget("./src/assets/js");
 
+    eleventyConfig.addPassthroughCopy("./src/assets/pdfs");
+    eleventyConfig.addWatchTarget("./src/assets/pdfs");
+
     return {
         dir: {
             input: "src",

@@ -1,7 +1,26 @@
-<div class="container">
-    <nav>
-        {% for info in navInfo %}
-            <a href="{{ info.id | url}}" class="{{ 'active' if info.id == navCategory}}">{{info.title}}</a>
-        {% endfor %}
-    </nav>
-</div>
+<desktop>
+    <div class="container">
+        <nav>
+            <a class="nav-img" href="{{ '/' | url }}">
+                <img src="../assets/images/favicon.png">
+            </a>
+            {% include "nav_links.njk" %}
+        </nav>
+    </div>
+    <nav-border></nav-border>
+</desktop>
+<mobile>
+    <div class="container">
+        <nav>
+            <a class="nav-img" href="{{ '/' | url }}">
+                <img src="../assets/images/favicon.png">
+            </a>
+            <img src="../assets/images/bars-solid.svg" alt="" id="nav-mobile-bars" class="svg-icon-color">
+        </nav>
+        <div id="popout" class="hide">
+            <img src="../assets/images/xmark-solid.svg" alt="" id="nav-mobile-x" class="svg-icon-color">
+            {% include "nav_links.njk" %}
+        </div>
+    </div>
+    <nav-border></nav-border>
+</mobile>

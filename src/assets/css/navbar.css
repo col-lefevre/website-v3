@@ -1,25 +1,113 @@
+/* UNIVERSAL  */
 nav {
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-end;
     align-items: center;
-    gap: 1.25rem;
+    justify-content: space-between;
     margin: 1rem 0rem;
 }
 
-nav a {
+nav-border {
+    display: flex;
+    background-color: var(--border-color);
+    width: 100vw;
+    height: 1px;
+}
+
+/* MOBILE VS DESKTOP */
+@media (min-width: 400px) {
+    mobile {
+        display: none;
+    }
+}
+
+@media (max-width: 399px) {
+    desktop {
+        display: none;
+    }
+}
+
+mobile {
+    position: sticky;
+    z-index: 98;
+    background-color: var(--background-color);
+}
+
+desktop nav-links {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    gap: var(--nav-gap);
+}
+
+mobile nav-links {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: flex-end;
+    gap: var(--nav-gap);
+}
+
+desktop .nav-img {
+    width: 30px;
+    height: 30px;
+}
+
+mobile .nav-img {
+    width: 25px;
+    height: 25px;
+}
+
+.nav-img img {
+    width: 100%;
+    height: 100%;
+}
+
+/* LINK STYLE*/
+nav a,
+#popout a {
     color: var(--subtitle-color);
 }
 
-nav a:hover {
+nav a:hover,
+#popout a {
     color: var(--subtitle-hover-color);
     text-decoration: none;
 }
 
-nav a.active {
+nav a.active,
+#popout a.active {
     color: var(--heading-color);
 }
 
-nav a.active:hover {
+nav a.active:hover,
+#popout a.active:hover {
     color: var(--heading-hover-color);
+}
+
+/* POPOUT */
+#nav-mobile-bars,
+#nav-mobile-x {
+    height: 25px;
+    width: 25px;
+}
+
+#popout {
+    width: 50vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: var(--popout-color);
+    padding: 1rem 20px;
+    /* Manual skeleton spacing is 20px */
+
+    display: flex;
+    flex-flow: column wrap;
+    gap: calc(var(--nav-gap) * 1.5);
+    align-items: flex-end;
+}
+
+#popout.hide {
+    display: none;
 }

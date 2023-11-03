@@ -1,0 +1,6 @@
+<nav-links>
+    {% for info in navInfo %}
+        <a href="{{ info.id | url}}" class="{{ 'active' if info.id == navCategory}}">{{info.title}}</a>
+    {% endfor %}
+    <a href="../assets/pdfs/CV_LeFevre_F23.pdf" target="_blank"	rel="noopener noreferrer">CV</a>
+</nav-links>
