@@ -1,0 +1,7 @@
+<div class="container">
+    <nav>
+        {% for info in navInfo %}
+            <a href="{{ info.id | url}}" class="{{ 'active' if info.id == navCategory}}">{{info.title}}</a>
+        {% endfor %}
+    </nav>
+</div>

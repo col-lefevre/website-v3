@@ -1,11 +1,16 @@
 ---
-title: Hello World
+title: Colin LeFevre
 layout: "base.njk"
+navCategory: /
 ---
 
-Hello everyone
+<h1>Heading 1</h1>
+<h2>Heading 2</h2>
+<subtitle>Subtitle</subtitle>
 
-{% for project in collections.research %}
+Welcome to my page
+
+{% for project in collections.researchProjects %}
 
 <a href="{{project.url}}">{{project.data.title}}</a>
 

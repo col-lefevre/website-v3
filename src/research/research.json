@@ -1,4 +1,5 @@
 {
-    "layout": "project.njk",
-    "tags": "research"
+    "layout": "base.njk",
+    "tags": "researchProjects",
+    "navCategory": "/research"
 }
