@@ -30,7 +30,7 @@ body {
     font-size: 1rem;
     color: var(--text-color);
     font-variation-settings: "wght" 400, "wdth" 100;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.25px;
 }
 
 subtitle {

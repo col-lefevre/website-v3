@@ -30,7 +30,7 @@ nav-border {
 
 mobile {
     position: sticky;
-    z-index: 98;
+    z-index: 100; /* very high num */
     background-color: var(--background-color);
 }
 
@@ -45,7 +45,7 @@ mobile nav-links {
     display: flex;
     flex-flow: column wrap;
     align-items: flex-end;
-    gap: var(--nav-gap);
+    gap: calc(var(--nav-gap) * 0.75);
 }
 
 desktop .nav-img {
@@ -96,16 +96,18 @@ nav a.active:hover,
     width: 50vw;
     height: 100vh;
     position: fixed;
+    box-sizing: border-box;
     top: 0;
     right: 0;
+    padding: 1rem 1.5rem;
+
     background-color: var(--popout-color);
-    padding: 1rem 20px;
-    /* Manual skeleton spacing is 20px */
+    backdrop-filter: blur(1000px);
 
     display: flex;
-    flex-flow: column wrap;
-    gap: calc(var(--nav-gap) * 1.5);
-    align-items: flex-end;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    justify-content: space-between;
 }
 
 #popout.hide {
