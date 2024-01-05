@@ -16,13 +16,13 @@ nav-border {
 }
 
 /* MOBILE VS DESKTOP */
-@media (min-width: 400px) {
+@media (min-width: 550px) {
     mobile {
         display: none;
     }
 }
 
-@media (max-width: 399px) {
+@media (max-width: 549px) {
     desktop {
         display: none;
     }
