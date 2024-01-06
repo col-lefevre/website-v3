@@ -16,18 +16,6 @@ nav-border {
 }
 
 /* MOBILE VS DESKTOP */
-@media (min-width: 550px) {
-    mobile {
-        display: none;
-    }
-}
-
-@media (max-width: 549px) {
-    desktop {
-        display: none;
-    }
-}
-
 mobile {
     position: sticky;
     z-index: 100; /* very high num */

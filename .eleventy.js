@@ -1,25 +1,23 @@
 module.exports = function (eleventyConfig) {
-    eleventyConfig.addPassthroughCopy("./src/assets/css");
-    eleventyConfig.addWatchTarget("./src/assets/css");
+    eleventyConfig.addPassthroughCopy("./src/assets/");
+    eleventyConfig.addWatchTarget("./src/assets/");
 
-    eleventyConfig.addPassthroughCopy("./src/assets/fonts");
-    eleventyConfig.addWatchTarget("./src/assets/css/fonts");
+    eleventyConfig.addPassthroughCopy("./src/css/");
+    eleventyConfig.addWatchTarget("./src/css/");
 
-    eleventyConfig.addPassthroughCopy("./src/assets/images");
-    eleventyConfig.addWatchTarget("./src/assets/images");
-
-    eleventyConfig.addPassthroughCopy("./src/assets/js");
-    eleventyConfig.addWatchTarget("./src/assets/js");
-
-    eleventyConfig.addPassthroughCopy("./src/assets/pdfs");
-    eleventyConfig.addWatchTarget("./src/assets/pdfs");
+    eleventyConfig.addPassthroughCopy("./src/js/");
+    eleventyConfig.addWatchTarget("./src/js/");
 
     return {
         dir: {
             input: "src",
-            output: "public",
             includes: "_includes",
             layouts: "_layouts",
+            output: "_site",
         },
+        templateFormats: ["md", "njk", "html"],
+        markdownTemplateEngine: "njk",
+        htmlTemplateEngine: "njk",
+        dataTemplateEngine: "njk",
     };
 };
