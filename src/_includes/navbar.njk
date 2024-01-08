@@ -4,7 +4,7 @@
             <a class="nav-img" href="{{ '/' | url }}">
                 <img src="/assets/images/favicon.png">
             </a>
-            {% include "nav_links.njk" %}
+            {% include "nav-links.njk" %}
         </nav>
     </div>
     <nav-border></nav-border>
@@ -15,12 +15,16 @@
             <a class="nav-img" href="{{ '/' | url }}">
                 <img src="/assets/images/favicon.png">
             </a>
-            <img src="/assets/images/bars-solid.svg" alt="" id="nav-mobile-bars" class="svg-icon-color">
+            <div id="nav-mobile-bars">
+                {% include "svg-nav-bars.njk" %}
+            </div>
         </nav>
     </div>
     <nav-border></nav-border>
     <div id="popout" class="hide">
-        <img src="/assets/images/xmark-solid.svg" alt="" id="nav-mobile-x" class="svg-icon-color">
-        {% include "nav_links.njk" %}
+        <div id="nav-mobile-x">
+            {% include "svg-nav-x.njk" %}
+        </div>
+        {% include "nav-links.njk" %}
     </div>
 </mobile>

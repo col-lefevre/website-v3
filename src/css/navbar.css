@@ -74,12 +74,6 @@ nav a.active:hover,
 }
 
 /* POPOUT */
-#nav-mobile-bars,
-#nav-mobile-x {
-    height: 25px;
-    width: 25px;
-}
-
 #popout {
     width: 50vw;
     height: 100vh;
@@ -100,4 +94,11 @@ nav a.active:hover,
 
 #popout.hide {
     display: none;
+}
+
+/* SVG */
+.svg-nav {
+    color: var(--subtitle-color);
+    height: 25px;
+    width: 25px;
 }

@@ -1,0 +1,18 @@
+intro p {
+    margin: 0;
+}
+
+icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 0.8rem;
+}
+
+intro head2 {
+    margin: 2.5px 0px;
+}
+
+icons a {
+    color: pink;
+}

@@ -10,7 +10,7 @@
     --heading-hover-color: #fff;
     --link-color: #1095c1;
     --link-hover-color: #19b3e6;
-    --main-font-size: 16px;
+    --main-font-size: 18px;
     --nav-gap: 1.25rem;
     /* Colors from PicoCSS Dark mode */
 }
@@ -34,24 +34,30 @@ body {
     letter-spacing: 0.25px;
 }
 
+nav {
+    font-size: 1rem;
+}
+
 subtitle {
     color: var(--subtitle-color);
     letter-spacing: 0.1px;
     /* Inherits rest from <body> */
 }
 
-h1 {
+head1 {
     font-size: 3rem;
     color: var(--heading-color);
     font-variation-settings: "wght" 700, "wdth" 100;
     letter-spacing: -1.5px;
+    display: block;
 }
 
-h2 {
+head2 {
     font-size: 2rem;
     color: var(--heading-color);
-    font-variation-settings: "wght" 550, "wdth" 100;
+    font-variation-settings: "wght" 650, "wdth" 100;
     letter-spacing: -0.5px;
+    display: block;
 }
 
 a {
@@ -66,9 +72,22 @@ a:hover {
     transition: color 0.15s ease;
 }
 
-.svg-icon-color {
-    filter: invert(41%) sepia(6%) saturate(1404%) hue-rotate(163deg)
-        brightness(95%) contrast(88%);
+.svg-general-2 {
+    /* 
+    Manually filtered from heading-color var
+    Works when SVG is black; no fill defaults to black
+    Source: https://stackoverflow.com/questions/22252472/how-can-i-change-the-color-of-an-svg-element
+    */
+    filter: invert(97%) sepia(3%) saturate(411%) hue-rotate(172deg)
+        brightness(94%) contrast(95%);
+    height: 25px;
+    width: 25px;
+}
+
+.svg-general {
+    color: var(--heading-color);
+    height: 25px;
+    width: 25px;
 }
 
 /* Mobile vs Desktop */
@@ -82,4 +101,17 @@ a:hover {
     desktop {
         display: none;
     }
+}
+
+/* MISC */
+#content-wrap {
+    margin-top: 60px;
+}
+
+img {
+    border-radius: 0.25rem;
+}
+
+p {
+    margin: 1.25rem 0rem;
 }
