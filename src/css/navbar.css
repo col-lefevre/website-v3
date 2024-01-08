@@ -8,13 +8,6 @@ nav {
     margin: 1rem 0rem;
 }
 
-nav-border {
-    display: flex;
-    background-color: var(--border-color);
-    width: 100vw;
-    height: 1px;
-}
-
 /* MOBILE VS DESKTOP */
 mobile {
     position: sticky;
@@ -27,6 +20,11 @@ desktop nav-links {
     flex-flow: row wrap;
     align-items: center;
     gap: var(--nav-gap);
+}
+
+mobile .container,
+desktop .container-fluid {
+    border-bottom: 1px solid var(--border-color);
 }
 
 mobile nav-links {

@@ -7,8 +7,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
 <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico"/>
-<link rel="stylesheet" href="/css/skeleton.css"/>
-<link rel="stylesheet" href="/css/normalize.css"/>
+
+<link rel="stylesheet" href="/css/bootstrap-grid.css"/>
 <link rel="stylesheet" href="/css/base.css"/>
 <link rel="stylesheet" href="/css/navbar.css"/>
 <link rel="stylesheet" href="/css/about.css"/>
@@ -20,12 +20,13 @@
     </head>
     <body>
         <header><desktop>
-    <div class="container">
-        <nav>
-            <a class="nav-img" href="/">
-                <img src="/assets/images/favicon.png">
-            </a>
-            
+    <div class="container-fluid">
+        <div class="container">
+            <nav>
+                <a class="nav-img" href="/">
+                    <img src="/assets/images/favicon.png">
+                </a>
+                
 
 <nav-links>
     
@@ -37,9 +38,9 @@
     
     <a href="/assets/pdfs/CV_LeFevre_F23.pdf" target="_blank" rel="noopener noreferrer">CV</a>
 </nav-links>
-        </nav>
+            </nav>
+        </div>
     </div>
-    <nav-border></nav-border>
 </desktop>
 <mobile>
     <div class="container">
@@ -55,7 +56,7 @@
             </div>
         </nav>
     </div>
-    <nav-border></nav-border>
+    <nav-border/>
     <div id="popout" class="hide">
         <div id="nav-mobile-x">
             <svg class="svg-nav" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
@@ -80,10 +81,11 @@
         <main>
             <div class="container" id="content-wrap">
                 <div class="row">
-    <div class="four columns">
-        <img src="assets/images/headshot_2x3.jpg" class="u-max-full-width">
+    <div class="col-lg-4">
+        <img src="assets/images/headshot_2x3.jpg" class="img-fluid">
     </div>
-    <div class="seven columns offset-by-one">
+    <div class="col-lg-1"></div>
+    <div class="col-lg-7">
         <intro>
             <p>Hello! I am</p>
             <head2>Colin LeFevre</head2>

@@ -1,13 +1,14 @@
 <desktop>
-    <div class="container">
-        <nav>
-            <a class="nav-img" href="{{ '/' | url }}">
-                <img src="/assets/images/favicon.png">
-            </a>
-            {% include "nav-links.njk" %}
-        </nav>
+    <div class="container-fluid">
+        <div class="container">
+            <nav>
+                <a class="nav-img" href="{{ '/' | url }}">
+                    <img src="/assets/images/favicon.png">
+                </a>
+                {% include "nav-links.njk" %}
+            </nav>
+        </div>
     </div>
-    <nav-border></nav-border>
 </desktop>
 <mobile>
     <div class="container">
@@ -20,7 +21,7 @@
             </div>
         </nav>
     </div>
-    <nav-border></nav-border>
+    <nav-border/>
     <div id="popout" class="hide">
         <div id="nav-mobile-x">
             {% include "svg-nav-x.njk" %}

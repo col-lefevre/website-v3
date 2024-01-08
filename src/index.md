@@ -6,10 +6,11 @@ title: Colin LeFevre
 ---
 
 <div class="row">
-    <div class="four columns">
-        <img src="{{ 'assets/images/headshot_2x3.jpg' | url }}" class="u-max-full-width">
+    <div class="col-lg-4">
+        <img src="{{ 'assets/images/headshot_2x3.jpg' | url }}" class="img-fluid">
     </div>
-    <div class="seven columns offset-by-one">
+    <div class="col-lg-1"></div>
+    <div class="col-lg-7">
         <intro>
             <p>Hello! I am</p>
             <head2>Colin LeFevre</head2>
@@ -29,5 +30,4 @@ title: Colin LeFevre
             {% include "svg-orcid.njk" %}
         </icons>
     </div>
-
 </div>
