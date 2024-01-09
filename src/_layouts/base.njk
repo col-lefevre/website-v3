@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html>
     <head>
-        {% include "basehead.njk" %}
+        {% include "base/basehead.njk" %}
     </head>
     <body>
-        <header>{% include "navbar.njk" %}</header>
+        <header>{% include "base/navbar.njk" %}</header>
         <main>
             <div class="container" id="content-wrap">
                 {{content | safe}}
             </div>
         </main>
+        <footer></footer>
     </main>
 </body>
 </html>

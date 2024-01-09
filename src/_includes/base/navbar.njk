@@ -1,0 +1,31 @@
+<div class="desktop tablet">
+    <div class="container-fluid">
+        <div class="container">
+            <nav>
+                <a class="nav-img" href="{{ '/' | url }}">
+                    <img src="/assets/images/favicon.png">
+                </a>
+                {% include "base/nav-links.njk" %}
+            </nav>
+        </div>
+    </div>
+</div>
+<div class="mobile">
+    <div class="container">
+        <nav>
+            <a class="nav-img" href="{{ '/' | url }}">
+                <img src="/assets/images/favicon.png">
+            </a>
+            <div id="nav-mobile-bars">
+                {% include "svg/svg-nav-bars.njk" %}
+            </div>
+        </nav>
+    </div>
+    <nav-border/>
+    <div id="popout" class="hide">
+        <div id="nav-mobile-x">
+            {% include "svg/svg-nav-x.njk" %}
+        </div>
+        {% include "base/nav-links.njk" %}
+    </div>
+</div>

@@ -2,44 +2,43 @@
 nav {
     display: flex;
     flex-flow: row wrap;
-    justify-content: flex-end;
     align-items: center;
     justify-content: space-between;
     margin: 1rem 0rem;
 }
 
 /* MOBILE VS DESKTOP */
-mobile {
+.mobile {
     position: sticky;
     z-index: 100; /* very high num */
     background-color: var(--background-color);
 }
 
-desktop nav-links {
+.desktop .nav-links {
     display: flex;
     flex-flow: row wrap;
     align-items: center;
     gap: var(--nav-gap);
 }
 
-mobile .container,
-desktop .container-fluid {
+.mobile .container,
+.desktop .container-fluid {
     border-bottom: 1px solid var(--border-color);
 }
 
-mobile nav-links {
+.mobile .nav-links {
     display: flex;
     flex-flow: column wrap;
     align-items: flex-end;
     gap: calc(var(--nav-gap) * 0.75);
 }
 
-desktop .nav-img {
+.desktop .nav-img {
     width: 30px;
     height: 30px;
 }
 
-mobile .nav-img {
+.mobile .nav-img {
     width: 25px;
     height: 25px;
 }

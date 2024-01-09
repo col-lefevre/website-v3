@@ -22,7 +22,6 @@
 }
 
 html {
-    font-size: var(--main-font-size);
     background-color: var(--background-color);
     font-family: "OpenSans-Var", sans-serif;
 }
@@ -32,19 +31,20 @@ body {
     color: var(--text-color);
     font-variation-settings: "wght" 400, "wdth" 100;
     letter-spacing: 0.25px;
+    margin: 0px;
 }
 
 nav {
     font-size: 1rem;
 }
 
-subtitle {
+.subtitle {
     color: var(--subtitle-color);
     letter-spacing: 0.1px;
     /* Inherits rest from <body> */
 }
 
-head1 {
+.h1 {
     font-size: 3rem;
     color: var(--heading-color);
     font-variation-settings: "wght" 700, "wdth" 100;
@@ -52,7 +52,7 @@ head1 {
     display: block;
 }
 
-head2 {
+.h2 {
     font-size: 2rem;
     color: var(--heading-color);
     font-variation-settings: "wght" 650, "wdth" 100;
@@ -78,26 +78,84 @@ a:hover {
     width: 25px;
 }
 
-/* Mobile vs Desktop */
-@media (min-width: 576px) {
-    mobile {
-        display: none;
+.mobile .svg-general {
+    height: 22.5px;
+    width: 22.5px;
+}
+
+a .svg-general:hover {
+    color: var(--heading-hover-color);
+    transition: color 0.15s ease;
+}
+
+/* BOOTSTRAP GRID HELPERS
+ 
+Mobile - "extra small", <576px
+Tablet - "small + medium", <992px & >=576px
+Desktop - "large + extra large"+, >=992px
+
+https://getbootstrap.com/docs/4.0/layout/grid/
+*/
+
+.mobile {
+    display: none;
+}
+
+.tablet {
+    display: none;
+}
+
+.desktop {
+    display: none;
+}
+
+/* Desktop */
+@media (min-width: 992px) {
+    .desktop {
+        display: flex;
+    }
+    html {
+        font-size: calc(var(--main-font-size) * 1);
+    }
+    #content-wrap {
+        margin-top: 3rem;
     }
 }
 
+/* Tablet */
+@media (min-width: 576px) and (max-width: 991px) {
+    .tablet {
+        display: flex;
+    }
+    html {
+        font-size: calc(var(--main-font-size) * 1);
+    }
+    #content-wrap {
+        margin-top: 3rem;
+    }
+}
+
+/* Mobile */
 @media (max-width: 575px) {
-    desktop {
-        display: none;
+    .mobile {
+        display: flex;
+    }
+    html {
+        font-size: calc(var(--main-font-size) * 0.9);
+    }
+    #content-wrap {
+        margin-top: 2rem;
     }
 }
 
 /* MISC */
-#content-wrap {
-    margin-top: 60px;
+.desktop img {
+    border-radius: 0.25rem;
 }
 
-img {
-    border-radius: 0.25rem;
+.tablet img,
+.mobile img {
+    border-radius: 0.5rem;
 }
 
 p {
