@@ -45,14 +45,6 @@ nav {
 }
 
 .h1 {
-    font-size: 3rem;
-    color: var(--heading-color);
-    font-variation-settings: "wght" 700, "wdth" 100;
-    letter-spacing: -1.5px;
-    display: block;
-}
-
-.h2 {
     font-size: 2rem;
     color: var(--heading-color);
     font-variation-settings: "wght" 650, "wdth" 100;
@@ -60,22 +52,31 @@ nav {
     display: block;
 }
 
+.h2 {
+    font-size: 1.5rem;
+    color: var(--heading-color);
+    font-variation-settings: "wght" 550, "wdth" 100;
+    letter-spacing: -0.5px;
+    display: block;
+}
+
 a {
     color: var(--link-color);
     text-decoration: none;
-    transition: color 0.3s ease;
+    transition: all 0.2s ease;
 }
 
 a:hover {
     color: var(--link-hover-color);
     text-decoration: underline;
-    transition: color 0.15s ease;
+    transition: all 0.2s ease;
 }
 
 .svg-general {
     color: var(--heading-color);
     height: 25px;
     width: 25px;
+    transition: all 0.2s ease;
 }
 
 .mobile .svg-general {
@@ -83,9 +84,9 @@ a:hover {
     width: 22.5px;
 }
 
-a .svg-general:hover {
+.svg-general:hover {
     color: var(--heading-hover-color);
-    transition: color 0.15s ease;
+    transition: all 0.2s ease;
 }
 
 /* BOOTSTRAP GRID HELPERS
@@ -118,7 +119,7 @@ https://getbootstrap.com/docs/4.0/layout/grid/
         font-size: calc(var(--main-font-size) * 1);
     }
     #content-wrap {
-        margin-top: 3rem;
+        margin-top: 4rem;
     }
 }
 
@@ -149,7 +150,7 @@ https://getbootstrap.com/docs/4.0/layout/grid/
 }
 
 /* MISC */
-.desktop img {
+img {
     border-radius: 0.25rem;
 }
 
@@ -160,4 +161,18 @@ https://getbootstrap.com/docs/4.0/layout/grid/
 
 p {
     margin: 1.25rem 0rem;
+}
+
+/* BUTTONS */
+.button {
+    padding: 0.65rem 1rem;
+    border-radius: 0.25rem;
+    background-color: var(--subtitle-color);
+    color: var(--heading-color);
+}
+
+.button:hover {
+    background-color: var(--subtitle-hover-color);
+    color: var(--heading-hover-color);
+    text-decoration: none;
 }
