@@ -54,6 +54,9 @@ cssFile: "index.css"
     </div>
 </div>
 
+{% include "project.njk" %}
+{% block y %} hiya {% endblock %}
+
 <!-- <div class="row">
     <div class="col-sm-4">
         <div class="desktop">
