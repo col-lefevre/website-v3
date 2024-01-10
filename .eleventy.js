@@ -10,24 +10,14 @@ module.exports = function (eleventyConfig) {
 
     // Pass code blocks while using front matter layout
     // Source: https://github.com/11ty/eleventy/issues/853
-
-    // Paired shortcode to capture content for a layout block
-    eleventyConfig.addPairedShortcode("layoutblock", function (content, name) {
-        // Store the content in a global data object with the specified name
-        if (!this.layoutBlocks) {
-            this.layoutBlocks = {};
-        }
-        this.layoutBlocks[name] = content;
-        return ""; // Return empty string since we are just storing the content
+    eleventyConfig.addShortcode("renderlayoutblock", function (name) {
+        return (this.page.layoutblock || {})[name];
     });
 
-    // Shortcode to render the content of a layout block
-    eleventyConfig.addShortcode("renderlayoutblock", function (name) {
-        // Check if the layout block exists
-        if (this.layoutBlocks && this.layoutBlocks[name]) {
-            return this.layoutBlocks[name]; // Return the stored content
-        }
-        return ""; // Return empty string if the block doesn't exist
+    eleventyConfig.addPairedShortcode("layoutblock", function (content, name) {
+        if (!this.page.layoutblock) this.page.layoutblock = {};
+        this.page.layoutblock[name] = content;
+        return "";
     });
 
     return {
