@@ -1,0 +1,74 @@
+---
+layout: base.njk
+navCategory: /
+cssFile: "index.css"
+title: Colin LeFevre
+---
+
+{# Intro Text #}
+{% macro intro() %}
+    <div class="intro">
+        <p>Hello! I am</p>
+        <div class="h1">Colin LeFevre</div>
+        <div class="subtitle">(he/him)</div>
+    </div class="intro">
+{% endmacro %}
+
+{# Contact Links #}
+{% macro links() %}
+    <div class="icons">
+        <a href="mailto:clefevr@iu.edu">{% include "svg/svg-email.njk" %}</a>
+        <a href="https://www.linkedin.com/in/colin-lefevre/">{% include "svg/svg-linkedin.njk" %}</a>
+        <a href="https://github.com/col-lefevre">{% include "svg/svg-github.njk" %}</a>
+        <a href="https://orcid.org/0000-0001-6453-7251">{% include "svg/svg-orcid.njk" %}</a>
+    </div class="icons">
+{% endmacro %}
+
+{# Description Text #}
+{% macro desc() %}
+    <div class="desc">
+        <p>I am a Human-Computer Interaction (HCI) researcher at  <a href="https://prohealth.luddy.indiana.edu/">Proactive Health Informatics</a>. I recently graduated from Indiana University Bloomington with a B.S. in Informatics.  </p>
+        <p>My research focuses on designing technologies which navigate cultural, social and personal factors to support health and wellbeing. At present, I am particularly interested in digital mental health and self-management.</p>
+        <p>I am currently advised by <a href="http://cfchung.com">Dr. Christina Chung</a>, and am a prospective applicant for HCI-focused Ph.D. programs which begin Fall 2024.</p>
+    </div>
+{% endmacro %}
+
+{# Desktop Layout #}
+<div class="row desktop">
+    <div class="col-lg-4">
+        <img src="{{ 'assets/images/headshot/headshot_2x3.jpg' | url }}" class="img-fluid">
+    </div>
+    <div class="col-lg-7 offset-1">
+        {{ intro() }}
+        {{ links() }}
+        {{ desc() }}
+    </div>
+</div>
+
+{# Tablet Layout #}
+<div class="row tablet">
+    <div class="col-sm-5">
+        <img src="{{ 'assets/images/headshot/headshot_1x1.jpg' | url }}" class="img-fluid">
+    </div>
+    <div class="col-sm-6 offset-1">
+        <div class="intro-link-bundle">
+            {{ intro() }}
+            {{ links() }}
+        </div>
+    </div>
+    <div class="col-sm-12">
+        {{ desc() }}
+    </div>
+</div>
+
+{# Mobile Layout #}
+<div class="row mobile">
+    <div class="col-12">
+        <img src="{{ 'assets/images/headshot/headshot_16x9.jpg' | url }}" class="img-fluid">
+    </div>
+    <div class="col-12">
+        {{ intro() }}
+        {{ links() }}
+        {{ desc() }}
+    </div>
+</div>

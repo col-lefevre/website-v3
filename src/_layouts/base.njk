@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
     <head>
-        {% include "base/basehead.njk" %}
+        {% include "partials/basehead.njk" %}
     </head>
     <body>
-        <header>{% include "base/navbar.njk" %}</header>
+        <header>{% include "partials/navbar.njk" %}</header>
         <main>
             <div class="container" id="content-wrap">
-                {{content | safe}}
+                {{ content | safe }}
             </div>
         </main>
         <footer></footer>
