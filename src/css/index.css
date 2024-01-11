@@ -22,14 +22,6 @@
     padding-top: 1.25rem;
 }
 
-/* For tablet */
-.intro-link-bundle {
-    height: 100%;
-    justify-content: center;
-    display: flex;
-    flex-direction: column;
-}
-
 .svg-general {
     color: var(--heading-color);
     height: 25px;
