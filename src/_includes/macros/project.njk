@@ -1,21 +1,29 @@
-{% macro project(header, subtitle, body, square_img, banner_img) %}
+{% macro button_helper(buttons) %}
+    <div class="buttons">
+        {% for entry in buttons %}
+            <a class="button" role="button" href="{{entry.link}}">{{entry.label}}</a>
+        {% endfor %}
+    </div>
+{% endmacro %}
 
+{% macro project(header, subtitle, body, img_1x1, img_3x2, img_16x9, buttons) %}
     {# Desktop Layout #}
     <div class="row desktop">
         <div class="col-lg-4">
-            <img src="{{ '/assets/images/' + square_img | url }}" class="img-fluid">
+            <img src="{{ '/assets/images/' + img_1x1 | url }}" class="img-fluid">
         </div>
         <div class="col-lg-7 offset-1">
             <div class="h2">{{header}}</div>
             <div class="subtitle">{{subtitle}}</div>
             <p>{{body}}</p>
+            {{ button_helper(buttons) }}
         </div>
     </div>
 
     {# Tablet Layout #}
     <div class="row tablet">
         <div class="col-sm-4">
-            <img src="{{ '/assets/images/' + banner_img | url }}" class="img-fluid">
+            <img src="{{ '/assets/images/' + img_3x2 | url }}" class="img-fluid">
         </div>
         <div class="col-sm-7 offset-1">
             <div class="intro-link-bundle">
@@ -25,18 +33,20 @@
         </div>
         <div class="col-sm-12">
             <p>{{body}}</p>
+            {{ button_helper(buttons) }}
         </div>
     </div>
 
     {# Mobile Layout #}
     <div class="row mobile">
         <div class="col-12">
-            <img src="{{ '/assets/images/' + banner_img | url }}" class="img-fluid">
+            <img src="{{ '/assets/images/' + img_16x9 | url }}" class="img-fluid">
         </div>
         <div class="col-12">
             <div class="h2">{{header}}</div>
             <div class="subtitle">{{subtitle}}</div>
             <p>{{body}}</p>
+            {{ button_helper(buttons) }}
         </div>
     </div>
 {% endmacro %}

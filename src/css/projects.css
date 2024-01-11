@@ -1,0 +1,19 @@
+.button {
+    padding: 0.65rem 1rem;
+    border-radius: 0.25rem;
+    background-color: var(--subtitle-color);
+    color: var(--heading-color);
+}
+
+.button:hover {
+    background-color: var(--subtitle-hover-color);
+    color: var(--heading-hover-color);
+    text-decoration: none;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 1rem;
+}

@@ -72,23 +72,6 @@ a:hover {
     transition: all 0.2s ease;
 }
 
-.svg-general {
-    color: var(--heading-color);
-    height: 25px;
-    width: 25px;
-    transition: all 0.2s ease;
-}
-
-.mobile .svg-general {
-    height: 22.5px;
-    width: 22.5px;
-}
-
-.svg-general:hover {
-    color: var(--heading-hover-color);
-    transition: all 0.2s ease;
-}
-
 /* BOOTSTRAP GRID HELPERS
  
 Mobile - "extra small", <576px
@@ -161,18 +144,4 @@ img {
 
 p {
     margin: 1.25rem 0rem;
-}
-
-/* BUTTONS */
-.button {
-    padding: 0.65rem 1rem;
-    border-radius: 0.25rem;
-    background-color: var(--subtitle-color);
-    color: var(--heading-color);
-}
-
-.button:hover {
-    background-color: var(--subtitle-hover-color);
-    color: var(--heading-hover-color);
-    text-decoration: none;
 }
