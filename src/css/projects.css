@@ -17,3 +17,16 @@
     justify-content: flex-start;
     gap: 1rem;
 }
+
+.project .desktop,
+.project .tablet {
+    margin-bottom: 4rem;
+}
+
+.project .mobile {
+    margin-bottom: 3.5rem;
+}
+
+.project .mobile img {
+    margin-bottom: 1rem;
+}

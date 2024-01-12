@@ -6,47 +6,49 @@
     </div>
 {% endmacro %}
 
-{% macro project(header, subtitle, body, img_1x1, img_3x2, img_16x9, buttons) %}
-    {# Desktop Layout #}
-    <div class="row desktop">
-        <div class="col-lg-4">
-            <img src="{{ '/assets/images/' + img_1x1 | url }}" class="img-fluid">
-        </div>
-        <div class="col-lg-7 offset-1">
-            <div class="h2">{{header}}</div>
-            <div class="subtitle">{{subtitle}}</div>
-            <p>{{body}}</p>
-            {{ button_helper(buttons) }}
-        </div>
-    </div>
-
-    {# Tablet Layout #}
-    <div class="row tablet">
-        <div class="col-sm-4">
-            <img src="{{ '/assets/images/' + img_3x2 | url }}" class="img-fluid">
-        </div>
-        <div class="col-sm-7 offset-1">
-            <div class="intro-link-bundle">
+{% macro project(header, subtitle, body, img_desktop, img_tablet, img_mobile, buttons) %}
+    <div class="project">
+        {# Desktop Layout #}
+        <div class="row desktop">
+            <div class="col-lg-4">
+                <img src="{{ '/assets/images/' + img_desktop | url }}" class="img-fluid">
+            </div>
+            <div class="col-lg-7 offset-1">
                 <div class="h2">{{header}}</div>
                 <div class="subtitle">{{subtitle}}</div>
+                <p>{{body}}</p>
+                {{ button_helper(buttons) }}
             </div>
         </div>
-        <div class="col-sm-12">
-            <p>{{body}}</p>
-            {{ button_helper(buttons) }}
-        </div>
-    </div>
 
-    {# Mobile Layout #}
-    <div class="row mobile">
-        <div class="col-12">
-            <img src="{{ '/assets/images/' + img_16x9 | url }}" class="img-fluid">
+        {# Tablet Layout #}
+        <div class="row tablet">
+            <div class="col-sm-4">
+                <img src="{{ '/assets/images/' + img_tablet | url }}" class="img-fluid">
+            </div>
+            <div class="col-sm-7 offset-1">
+                <div class="vertical-center">
+                    <div class="h2">{{header}}</div>
+                    <div class="subtitle">{{subtitle}}</div>
+                </div>
+            </div>
+            <div class="col-sm-12">
+                <p>{{body}}</p>
+                {{ button_helper(buttons) }}
+            </div>
         </div>
-        <div class="col-12">
-            <div class="h2">{{header}}</div>
-            <div class="subtitle">{{subtitle}}</div>
-            <p>{{body}}</p>
-            {{ button_helper(buttons) }}
+
+        {# Mobile Layout #}
+        <div class="row mobile">
+            <div class="col-12">
+                <img src="{{ '/assets/images/' + img_mobile | url }}" class="img-fluid">
+            </div>
+            <div class="col-12">
+                <div class="h2">{{header}}</div>
+                <div class="subtitle">{{subtitle}}</div>
+                <p>{{body}}</p>
+                {{ button_helper(buttons) }}
+            </div>
         </div>
     </div>
 {% endmacro %}
