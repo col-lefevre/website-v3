@@ -21,8 +21,7 @@ nav {
     gap: var(--nav-gap);
 }
 
-.mobile .container,
-.desktop .container-fluid {
+.nav-border {
     border-bottom: 1px solid var(--border-color);
 }
 

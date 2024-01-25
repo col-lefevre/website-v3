@@ -1,4 +1,5 @@
 module.exports = function (eleventyConfig) {
+    // Add non-default paths
     eleventyConfig.addPassthroughCopy("./src/assets/");
     eleventyConfig.addWatchTarget("./src/assets/");
 
@@ -7,6 +8,12 @@ module.exports = function (eleventyConfig) {
 
     eleventyConfig.addPassthroughCopy("./src/js/");
     eleventyConfig.addWatchTarget("./src/js/");
+
+    // Automatically fill footer with current date on build
+    eleventyConfig.addFilter("date", function () {
+        const options = { month: "short", year: "numeric" };
+        return new Date().toLocaleDateString(undefined, options);
+    });
 
     return {
         dir: {
