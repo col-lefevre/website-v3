@@ -11,10 +11,29 @@
     text-decoration: none;
 }
 
+.tablet .button {
+    padding: 0.65rem 0.9rem;
+}
+
+.mobile .button {
+    padding: 0.6rem 0.8rem;
+}
+
 .buttons {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
+    padding-top: 0.25rem;
+    gap: 1.5rem;
+    flex-grow: 0;
+    flex-wrap: wrap;
+}
+
+.tablet .buttons {
+    gap: 1.25rem;
+}
+
+.mobile .buttons {
     gap: 1rem;
 }
 
