@@ -1,7 +1,7 @@
 {% macro button_helper(buttons) %}
     <div class="buttons">
         {% for entry in buttons %}
-            <a class="button" role="button" href="{{entry.link}}">{{entry.label}}</a>
+            <a class="button {{'disabled' if entry.disabled}}" role="button" href="{{ entry.link | url }}" target="_blank" rel="noopener noreferrer">{{entry.label}}</a>
         {% endfor %}
     </div>
 {% endmacro %}

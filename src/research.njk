@@ -2,7 +2,7 @@
 layout: base.njk
 title: Research
 navCategory: /research
-cssFile: ["project.css", "research.css"]
+cssFile: ["project.css", "research.css", "buttons.css"]
 ---
 
 <div class="h1">Research</div>
@@ -11,33 +11,33 @@ cssFile: ["project.css", "research.css"]
 
 {# Reflection and Bereavement #}
 {{ macros.project(
-    'Reflective Technology & Bereavement',
-    'Spring 2022 - Present',
-    'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
-    'research/bereavement_3x2.png',
-    'research/bereavement_3x2.png',
-    'research/bereavement_16x9.png',
-    [{label: "CHI '24 Paper", link: '/'},{label: "CHI '23 Poster", link: '/'}]
+    header='Reflective Technology & Bereavement',
+    subtitle='Spring 2022 - Present',
+    body='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+    img_desktop='research/bereavement_3x2.png',
+    img_tablet='research/bereavement_3x2.png',
+    img_mobile='research/bereavement_16x9.png',
+    buttons=[{label: "CHI '24 Paper", disabled: true, link: ''},{label: "CHI '23 Poster", link: '/assets/pdfs/reflective_tech_bereavement_chi23.pdf'}]
 )}}
 
 {# Cooking Stories #}
 {{ macros.project(
-    "Digitally Shared Cooking Experiences",
-    'Fall 2021 - Present',
-    'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
-    'research/cooking_3x2.png',
-    'research/cooking_3x2.png',
-    'research/cooking_16x9.png',
-    [{label: "ECSCW '22 Poster", link: '/'}]
+    header="Digitally Shared Cooking Experiences",
+    subtitle='Fall 2021 - Present',
+    body='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+    img_desktop='research/cooking_3x2.png',
+    img_tablet='research/cooking_3x2.png',
+    img_mobile='research/cooking_16x9.png',
+    buttons=[{label: "ECSCW '22 Poster", link: '/assets/pdfs/digital_cooking_experiences_ecscw22.pdf'}]
 )}}
 
 {# Abortion Activism #}
 {{ macros.project(
-    "Technology & Abortion Activism",
-    'Fall 2022 - Winter 2023',
-    'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
-    'research/abortion_3x2.png',
-    'research/abortion_3x2.png',
-    'research/abortion_16x9.png',
-    [{label: "CSCW '23 Poster", link: '/'}]
+    header="Technology & Abortion Activism",
+    subtitle='Fall 2022 - Winter 2023',
+    body='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+    img_desktop='research/abortion_3x2.png',
+    img_tablet='research/abortion_3x2.png',
+    img_mobile='research/abortion_16x9.png',
+    buttons=[{label: "CSCW '23 Poster", link: '/assets/pdfs/abortion_activism_cscw23.pdf'}]
 )}}
