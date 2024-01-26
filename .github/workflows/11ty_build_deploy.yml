@@ -16,9 +16,9 @@ jobs:
               with:
                   publish_dir: _site
                   publish_branch: gh-pages
-                  github_token: ${{ secrets.GITHUB_TOKEN }}
-# name: Eleventy Build + Deploy
+                  github_token: ${{ secrets.REPO_ACCESS_TOKEN }}
 
+                  # name: Eleventy Build + Deploy
 # on:
 #     push:
 #         branches:
