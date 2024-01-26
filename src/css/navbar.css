@@ -9,8 +9,6 @@ nav {
 
 /* MOBILE VS DESKTOP */
 .mobile {
-    position: sticky;
-    z-index: 100; /* very high num */
     background-color: var(--background-color);
 }
 
@@ -28,7 +26,7 @@ nav {
 .mobile .nav-links {
     display: flex;
     flex-flow: column wrap;
-    align-items: flex-end;
+    align-items: flex-start;
     gap: calc(var(--nav-gap) * 0.75);
 }
 
@@ -71,25 +69,32 @@ nav a.active:hover,
 
 /* POPOUT */
 #popout {
-    width: 50vw;
+    width: 55vw;
     height: 100vh;
     position: fixed;
-    box-sizing: border-box;
     top: 0;
     right: 0;
-    padding: 1rem 1.5rem;
+    padding-top: 1rem;
+    padding-left: 2rem;
 
     background-color: var(--popout-color);
-    backdrop-filter: blur(1000px);
+    z-index: 9999;
 
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: column wrap;
     align-items: flex-start;
-    justify-content: space-between;
+    justify-content: flex-start;
 }
 
 #popout.hide {
     display: none;
+}
+
+#popout .nav-links {
+    padding-top: 1rem;
+    font-size: 1.2rem;
+    font-variation-settings: "wght" 500, "wdth" 100;
+    letter-spacing: 0px;
 }
 
 /* SVG */
