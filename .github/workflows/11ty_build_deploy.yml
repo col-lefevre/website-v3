@@ -11,57 +11,21 @@ jobs:
             - uses: actions/checkout@master
             - name: Build
               uses: TartanLlama/actions-eleventy@master
-            - name: Deploy
-              uses: peaceiris/actions-gh-pages@v3
+
+            # - name: Deploy (Internal Branch)
+            #   uses: peaceiris/actions-gh-pages@v3
+            #   with:
+            #       publish_dir: _site
+            #       publish_branch: gh-pages
+            #       github_token: ${{ secrets.REPO_ACCESS_TOKEN }}
+
+            - name: Deploy (External Repo)
+              uses: cpina/github-action-push-to-another-repository@main
+              env:
+                  API_TOKEN_GITHUB: ${{ secrets.REPO_ACCESS_TOKEN }}
               with:
-                  publish_dir: _site
-                  publish_branch: gh-pages
-                  github_token: ${{ secrets.REPO_ACCESS_TOKEN }}
-
-                  # name: Eleventy Build + Deploy
-# on:
-#     push:
-#         branches:
-#             - main
-
-# jobs:
-#     build:
-#         runs-on: ubuntu-latest
-
-#         steps:
-#             - name: Checkout repository
-#               uses: actions/checkout@v2
-
-#             - name: Setup Node.js
-#               uses: actions/setup-node@v3
-#               with:
-#                   node-version: "14"
-
-#             - name: Install dependencies
-#               run: npm install
-
-#             - name: Build Eleventy site
-#               run: npm run build # package.json build command
-
-# deploy:
-#     runs-on: ubuntu-latest
-#     needs: build
-#     steps:
-#         - name: Checkout deployment repository
-#           uses: actions/checkout@v2
-#           with:
-#               repository: col-lefevre/col-lefevre.github.io # GitHub Pages repo
-
-#         - name: Remove existing files
-#           run: rm -rf *
-
-#         - name: Copy built files
-#           run: cp -r ./_site .
-
-#         - name: Commit changes
-#           run: |
-#               git config user.name "${{ github.actor }}"
-#               git config user.email "${{ github.actor }}@users.noreply.github.com"
-#               git add -A
-#               git commit -m "Deploy Eleventy site - ${{ github.sha }}"
-#               git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/col-lefevre/col-lefevre.github.io.git HEAD:main
+                  source-directory: "_site"
+                  destination-github-username: "col-lefevre"
+                  destination-repository-name: "col-lefevre.github.io"
+                  user-email: colin.lefevre.school@gmail.com
+                  target-branch: main
