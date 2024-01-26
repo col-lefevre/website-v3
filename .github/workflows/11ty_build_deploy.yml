@@ -37,7 +37,7 @@ jobs:
               run: rm -rf *
 
             - name: Copy built files
-              run: cp -r ./_site/* .
+              run: cp -r ../_site/* .
 
             - name: Commit changes
               run: |
