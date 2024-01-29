@@ -84,16 +84,18 @@ nav a.active:hover,
     flex-flow: column wrap;
     align-items: flex-start;
     justify-content: flex-start;
+
+    transition: all 0.2s ease-in-out;
 }
 
 #popout.hide {
-    display: none;
+    right: -55vw;
 }
 
 #popout .nav-links {
     padding-top: 1rem;
     font-size: 1.2rem;
-    font-variation-settings: "wght" 500, "wdth" 100;
+    font-variation-settings: "wght" 400, "wdth" 100;
     letter-spacing: 0px;
 }
 
