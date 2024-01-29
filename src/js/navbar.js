@@ -1,8 +1,4 @@
 $(document).ready(function () {
-    // Dynamically set mobile nav spacing
-    var mobileNavHeight = $("#mobile-nav").height();
-    $("#mobile-nav-spacer").height(mobileNavHeight);
-
     // Open on #hamburger-bars click
     $("#nav-mobile-bars").click(function (event) {
         if ($("#popout").hasClass("hide")) {
@@ -36,15 +32,18 @@ $(document).ready(function () {
         $(window).on("scroll", function () {
             var newScroll = $(window).scrollTop();
             // Hide on scroll down
-            if (newScroll > oldScroll && !$("#mobile-nav").hasClass("hide")) {
-                $("#mobile-nav").addClass("hide");
+            if (
+                newScroll > oldScroll &&
+                !$("#mobile-nav-wrap").hasClass("hide")
+            ) {
+                $("#mobile-nav-wrap").addClass("hide");
             }
             // Show on scroll up
             else if (
                 newScroll < oldScroll &&
-                $("#mobile-nav").hasClass("hide")
+                $("#mobile-nav-wrap").hasClass("hide")
             ) {
-                $("#mobile-nav").removeClass("hide");
+                $("#mobile-nav-wrap").removeClass("hide");
             }
             oldScroll = newScroll;
         });

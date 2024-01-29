@@ -12,6 +12,8 @@
     --link-hover-color: #19b3e6;
     --main-font-size: 18px;
     --nav-gap: 1.25rem;
+    --transition-delay: 0.2s;
+    --transition-style: ease-in-out;
     /* Colors from PicoCSS Dark mode */
 }
 
@@ -63,13 +65,12 @@ nav {
 a {
     color: var(--link-color);
     text-decoration: none;
-    transition: all 0.2s ease;
+    transition: all var(--transition-delay) var(--transition-style);
 }
 
 a:hover {
     color: var(--link-hover-color);
     text-decoration: underline;
-    transition: all 0.2s ease;
 }
 
 /* BOOTSTRAP GRID HELPERS
