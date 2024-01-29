@@ -20,7 +20,7 @@ nav {
 }
 
 .nav-border {
-    border-bottom: 1px solid var(--border-color);
+    border-bottom: 1.5px solid var(--border-color);
 }
 
 .mobile .nav-links {
