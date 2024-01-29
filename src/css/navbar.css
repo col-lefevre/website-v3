@@ -38,7 +38,7 @@
     display: flex;
     flex-flow: column wrap;
     align-items: flex-start;
-    gap: calc(var(--nav-gap) * 0.75);
+    gap: var(--nav-gap);
 }
 
 .desktop .nav-img {
@@ -122,9 +122,9 @@
 
 #popout .nav-links {
     padding-top: 1rem;
-    font-size: 1.2rem;
+    font-size: 1.15rem;
     font-variation-settings: "wght" 400, "wdth" 100;
-    letter-spacing: 0px;
+    letter-spacing: 0.5px;
 }
 
 /* SVG */
