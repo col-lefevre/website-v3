@@ -1,3 +1,4 @@
+{# Desktop + Tablet #}
 <div class="desktop tablet">
     <div class="container-fluid nav-border">
         <div class="container">
@@ -10,8 +11,11 @@
         </div>
     </div>
 </div>
+
+{# Mobile #}
 <div class="mobile">
-    <div class="container nav-border">
+    {# Navbar #}
+    <div class="container nav-border" id="mobile-nav">
         <nav>
             <a class="nav-img" href="{{ '/' | url }}">
                 <img src="/assets/images/favicon.png">
@@ -21,6 +25,9 @@
             </div>
         </nav>
     </div>
+    {# Spacing for floating navbar #}
+    <div id="mobile-nav-spacer"/>
+    {# Popout #}
     <div id="popout" class="container hide">
         <div id="nav-mobile-x">
             {% include "svg/svg-nav-x.njk" %}
