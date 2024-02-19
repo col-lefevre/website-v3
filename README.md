@@ -2,7 +2,8 @@
 
 This is the 3rd iteration of my personal site. Resources are as follows:
 
--   [Eleventy](https://www.11ty.dev/) for static site building
+-   [Eleventy](https://www.11ty.dev/) for templating and static site building
+-   [Nunjucks]() for reusable UI components
 -   [FontAwesome](https://fontawesome.com/) for SVG icons
 -   [OpenSans](https://fonts.google.com/specimen/Open+Sans) for fonts
 -   [JQuery](https://jquery.com/) for less painful JavaScript
