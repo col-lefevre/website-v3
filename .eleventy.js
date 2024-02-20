@@ -9,6 +9,8 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy("./src/js/");
     eleventyConfig.addWatchTarget("./src/js/");
 
+    eleventyConfig.addPassthroughCopy("./CNAME");
+
     // Automatically fill footer with current date on build
     eleventyConfig.addFilter("date", function () {
         const options = { month: "short", year: "numeric" };
