@@ -42,12 +42,12 @@
 }
 
 .desktop .nav-img {
-    width: 30px;
+    /* width: 30px; */
     height: 30px;
 }
 
 .mobile .nav-img {
-    width: 25px;
+    /* width: 25px; */
     height: 25px;
 }
 
@@ -132,4 +132,14 @@
     color: var(--subtitle-color);
     height: 25px;
     width: 25px;
+}
+
+/* MISC */
+
+/* Fixes weird height issues */
+#nav-mobile-bars,
+#nav-mobile-x {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
