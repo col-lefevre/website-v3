@@ -35,7 +35,9 @@
                 </div>
             </div>
             <div class="col-sm-12">
-                <p>{{body}}</p>
+                {% for entry in body %}
+                    <p>{{entry | safe}}</p>
+                {% endfor %}
                 {{ button_helper(buttons) }}
             </div>
         </div>
@@ -48,7 +50,9 @@
             <div class="col-12">
                 <div class="h2">{{header}}</div>
                 <div class="subtitle">{{subtitle}}</div>
-                <p>{{body}}</p>
+                {% for entry in body %}
+                    <p>{{entry | safe}}</p>
+                {% endfor %}
                 {{ button_helper(buttons) }}
             </div>
         </div>
