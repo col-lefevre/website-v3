@@ -16,7 +16,9 @@
             <div class="col-lg-7 offset-1">
                 <div class="h2">{{header}}</div>
                 <div class="subtitle">{{subtitle}}</div>
-                <p>{{body}}</p>
+                {% for entry in body %}
+                    <p>{{entry | safe}}</p>
+                {% endfor %}
                 {{ button_helper(buttons) }}
             </div>
         </div>
