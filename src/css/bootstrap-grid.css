@@ -1974,8 +1974,3 @@ html {
     }
 }
 /*# sourceMappingURL=bootstrap-grid.css.map */
-
-.img-fluid {
-    max-width: 100%;
-    height: auto;
-}

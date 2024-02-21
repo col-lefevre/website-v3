@@ -133,7 +133,7 @@ https://getbootstrap.com/docs/4.0/layout/grid/
     }
 }
 
-/* MISC */
+/* IMAGES */
 img {
     border-radius: 0.25rem;
 }
@@ -143,6 +143,29 @@ img {
     border-radius: 0.5rem;
 }
 
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.crop-1x1 {
+    aspect-ratio: 1 / 1;
+}
+
+.crop-3x2 {
+    aspect-ratio: 3 / 2;
+}
+
+.crop-2x3 {
+    aspect-ratio: 2 / 3;
+}
+
+.crop-16x9 {
+    aspect-ratio: 16 / 9;
+}
+
+/* MISC */
 p {
     margin: 1.25rem 0rem;
 }
