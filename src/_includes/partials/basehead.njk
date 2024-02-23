@@ -1,23 +1,23 @@
 {# Meta Info #}
 <meta charset="utf-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-<meta name="viewport" content="width=device-width, initial-scale=1"/>
-<meta name="description" content="Colin LeFevre's personal website"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Colin LeFevre's personal website">
 <meta name="author" content="Colin LeFevre">
 
 {# Tab Bar #}
-<link rel="icon" type="image/x-icon" href="{{ '/assets/images/favicon.ico' | url }}"/>
+<link rel="icon" type="image/x-icon" href="{{ '/assets/images/favicon.ico' | url }}">
 <title>{{title}}</title>
 
 {# Global CSS #}
-<link rel="stylesheet" href="{{ '/css/bootstrap-grid.css' | url }}"/>
-<link rel="stylesheet" href="{{ '/css/base.css' | url }}"/>
-<link rel="stylesheet" href="{{ '/css/navbar.css' | url }}"/>
-<link rel="stylesheet" href="{{ '/css/footer.css' | url }}"/>
+<link rel="stylesheet" href="{{ '/css/bootstrap-grid.css' | url }}">
+<link rel="stylesheet" href="{{ '/css/base.css' | url }}">
+<link rel="stylesheet" href="{{ '/css/navbar.css' | url }}">
+<link rel="stylesheet" href="{{ '/css/footer.css' | url }}">
 
 {# Page-specific CSS #}
 {% for file in cssFile %}
-    <link rel="stylesheet" href="{{ '/css/' + file | url }}"/>
+    <link rel="stylesheet" href="{{ '/css/' + file | url }}">
 {% endfor %}
 
 {# JavaScript #}

@@ -3,8 +3,9 @@
     <div class="container-fluid nav-border">
         <div class="container">
             <div class="nav">
-                <a class="nav-img" href="{{ '/' | url }}">
-                    <img src="/assets/images/favicon.png">
+                <a class="nav-img" href="{{ '/' | url }}" title="About">
+                    <img src="/assets/images/favicon.png" aria-hidden="true">
+                    <span class="sr-only">About</span>
                 </a>
                 {% include "partials/nav-links.njk" %}
             </div>
@@ -17,8 +18,9 @@
     {# Navbar #}
     <div class="container nav-border" id="mobile-nav-wrap">
         <div class="nav">
-            <a class="nav-img" href="{{ '/' | url }}">
-                <img src="/assets/images/favicon.png">
+            <a class="nav-img" href="{{ '/' | url }}" title="About">
+                <img src="/assets/images/favicon.png" aria-hidden="true">
+                <span class="sr-only">About</span>
             </a>
             <div id="nav-mobile-bars">
                 {% include "svg/svg-nav-bars.njk" %}
@@ -26,7 +28,7 @@
         </div>
     </div>
     {# Spacing for floating navbar #}
-    <div id="mobile-nav-spacer"/>
+    <div id="mobile-nav-spacer"></div>
     {# Popout #}
     <div id="popout" class="container hide">
         <div id="nav-mobile-x">
