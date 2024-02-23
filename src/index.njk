@@ -17,10 +17,14 @@ title: Colin LeFevre
 {# Contact Links #}
 {% macro links() %}
     <div class="icons">
-        <a href="mailto:clefevr@iu.edu">{% include "svg/svg-email.njk" %}</a>
-        <a href="https://www.linkedin.com/in/colin-lefevre/">{% include "svg/svg-linkedin.njk" %}</a>
-        <a href="https://github.com/col-lefevre">{% include "svg/svg-github.njk" %}</a>
-        <a href="https://orcid.org/0000-0001-6453-7251">{% include "svg/svg-orcid.njk" %}</a>
+        <a href="mailto:clefevr@iu.edu" title="Email">{% include "svg/svg-email.njk" %}
+            <span class="sr-only">Email</span></a>
+        <a href="https://www.linkedin.com/in/colin-lefevre/" title="LinkedIn">{% include "svg/svg-linkedin.njk" %}
+            <span class="sr-only">LinkedIn</span></a>
+        <a href="https://github.com/col-lefevre" title="Github">{% include "svg/svg-github.njk" %}
+            <span class="sr-only">Github</span></a>
+        <a href="https://orcid.org/0000-0001-6453-7251" title="ORCID">{% include "svg/svg-orcid.njk" %}
+            <span class="sr-only">ORCID</span></a>
     </div class="icons">
 {% endmacro %}
 
@@ -36,7 +40,7 @@ title: Colin LeFevre
 {# Desktop Layout #}
 <div class="row desktop">
     <div class="col-lg-4">
-        <img src="{{ 'assets/images/headshot/headshot_2x3.jpg' | url }}" class="img-fluid">
+        <img src="{{ 'assets/images/headshot/headshot_2x3.jpg' | url }}" class="img-fluid" alt="Colin LeFevre standing in a forest on a sunny day">
     </div>
     <div class="col-lg-7 offset-1">
         {{ intro() }}
@@ -48,7 +52,7 @@ title: Colin LeFevre
 {# Tablet Layout #}
 <div class="row tablet">
     <div class="col-sm-5">
-        <img src="{{ 'assets/images/headshot/headshot_1x1.jpg' | url }}" class="img-fluid">
+        <img src="{{ 'assets/images/headshot/headshot_1x1.jpg' | url }}" class="img-fluid" alt="Colin LeFevre standing in a forest on a sunny day">
     </div>
     <div class="col-sm-6 offset-1">
         <div class="vertical-center">
@@ -64,7 +68,7 @@ title: Colin LeFevre
 {# Mobile Layout #}
 <div class="row mobile">
     <div class="col-12">
-        <img src="{{ 'assets/images/headshot/headshot_16x9.jpg' | url }}" class="img-fluid">
+        <img src="{{ 'assets/images/headshot/headshot_16x9.jpg' | url }}" class="img-fluid" alt="Colin LeFevre standing in a forest on a sunny day">
     </div>
     <div class="col-12">
         {{ intro() }}
