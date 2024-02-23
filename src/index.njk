@@ -32,15 +32,15 @@ title: Colin LeFevre
 {% macro desc() %}
     <div class="desc">
         <p>I am a Human-Computer Interaction (HCI) researcher at  <a href="https://prohealth.luddy.indiana.edu/">Proactive Health Informatics</a>. I recently graduated from Indiana University Bloomington with a B.S. in Informatics.</p>
-        <p>My research focuses on designing technologies which navigate cultural, social and personal factors to support health and wellbeing. At present, I am particularly interested in digital mental health and self-management.</p>
-        <p>Currently, I am collaborating with my undergraduate research advisor <a href="http://cfchung.com">Dr. Christina Chung</a>, and am awaiting the results of Ph.D. applications.</p>
+        <p>My research focuses on designing technologies which support health and wellbeing in everyday settings. At present, I am particularly interested in digital mental health and self-management. My undergraduate research was advised by <a href="http://cfchung.com">Christina Chung</a>.</p>
+        <p>Currently, I am wrapping up undergraduate research projects, awaiting Ph.D. application results, and generally relaxing.</p>
     </div>
 {% endmacro %}
 
 {# Desktop Layout #}
 <div class="row desktop">
     <div class="col-lg-4">
-        <img src="{{ 'assets/images/headshot/headshot_2x3.jpg' | url }}" class="img-fluid" alt="Colin LeFevre standing in a forest on a sunny day">
+        <img src="{{ 'assets/images/headshot.jpg' | url }}" class="img-fluid crop-2x3" alt="Colin LeFevre standing in a forest on a sunny day">
     </div>
     <div class="col-lg-7 offset-1">
         {{ intro() }}
@@ -52,7 +52,7 @@ title: Colin LeFevre
 {# Tablet Layout #}
 <div class="row tablet">
     <div class="col-sm-5">
-        <img src="{{ 'assets/images/headshot/headshot_1x1.jpg' | url }}" class="img-fluid" alt="Colin LeFevre standing in a forest on a sunny day">
+        <img src="{{ 'assets/images/headshot.jpg' | url }}" class="img-fluid crop-1x1" alt="Colin LeFevre standing in a forest on a sunny day">
     </div>
     <div class="col-sm-6 offset-1">
         <div class="vertical-center">
@@ -68,7 +68,7 @@ title: Colin LeFevre
 {# Mobile Layout #}
 <div class="row mobile">
     <div class="col-12">
-        <img src="{{ 'assets/images/headshot/headshot_16x9.jpg' | url }}" class="img-fluid" alt="Colin LeFevre standing in a forest on a sunny day">
+        <img src="{{ 'assets/images/headshot.jpg' | url }}" class="img-fluid crop-16x9" alt="Colin LeFevre standing in a forest on a sunny day">
     </div>
     <div class="col-12">
         {{ intro() }}
