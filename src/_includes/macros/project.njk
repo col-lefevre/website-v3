@@ -6,12 +6,12 @@
     </div>
 {% endmacro %}
 
-{% macro project(header, subtitle, body, img, buttons) %}
+{% macro project(header, subtitle, body, img, alt, buttons) %}
     <div class="project">
         {# Desktop Layout #}
         <div class="row desktop">
             <div class="col-lg-4">
-                <img loading="lazy" src="{{ '/assets/images/' + img | url }}" class="img-fluid crop-3x2">
+                <img loading="lazy" src="{{ '/assets/images/' + img | url }}" class="img-fluid crop-3x2" alt="{{alt}}">
             </div>
             <div class="col-lg-7 offset-1">
                 <div class="h2">{{header}}</div>
@@ -26,7 +26,7 @@
         {# Tablet Layout #}
         <div class="row tablet">
             <div class="col-sm-4">
-                <img loading="lazy" src="{{ '/assets/images/' + img | url }}" class="img-fluid crop-3x2">
+                <img loading="lazy" src="{{ '/assets/images/' + img | url }}" class="img-fluid crop-3x2" alt="{{alt}}">
             </div>
             <div class="col-sm-7 offset-1">
                 <div class="vertical-center">
@@ -45,7 +45,7 @@
         {# Mobile Layout #}
         <div class="row mobile">
             <div class="col-12">
-                <img loading="lazy" src="{{ '/assets/images/' + img | url }}" class="img-fluid crop-16x9">
+                <img loading="lazy" src="{{ '/assets/images/' + img | url }}" class="img-fluid crop-16x9" alt="{{alt}}">
             </div>
             <div class="col-12">
                 <div class="h2">{{header}}</div>
