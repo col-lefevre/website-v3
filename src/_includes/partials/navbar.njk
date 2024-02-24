@@ -1,27 +1,25 @@
 {# Desktop + Tablet #}
-<div class="desktop tablet">
+<nav class="desktop tablet" aria-label="Main menu">
     <div class="container-fluid nav-border">
         <div class="container">
-            <div class="nav">
-                <a class="nav-img" href="{{ '/' | url }}" title="About">
-                    <img src="/assets/images/favicon.png" aria-hidden="true">
-                    <span class="sr-only">About</span>
-                </a>
+            <div class="nav-container">
+                <div class="nav-img">
+                    <img src="{{ '/assets/images/favicon.png' | url }}" alt="stylized letter C logo">
+                </div>
                 {% include "partials/nav-links.njk" %}
             </div>
         </div>
     </div>
-</div>
+</nav>
 
 {# Mobile #}
-<div class="mobile">
+<nav class="mobile" aria-label="Main menu">
     {# Navbar #}
     <div class="container nav-border" id="mobile-nav-wrap">
-        <div class="nav">
-            <a class="nav-img" href="{{ '/' | url }}" title="About">
-                <img src="/assets/images/favicon.png" aria-hidden="true">
-                <span class="sr-only">About</span>
-            </a>
+        <div class="nav-container">
+            <div class="nav-img">
+                <img src="{{ '/assets/images/favicon.png' | url }}" alt="stylized letter C logo">
+            </div>
             <div id="nav-mobile-bars">
                 {% include "svg/svg-nav-bars.njk" %}
             </div>
@@ -36,4 +34,4 @@
         </div>
         {% include "partials/nav-links.njk" %}
     </div>
-</div>
+</nav>

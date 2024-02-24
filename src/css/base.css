@@ -4,17 +4,23 @@
     --border-color: #1f2d38;
     --popout-color: #141e26;
     --text-color: #bbc6ce;
-    --subtitle-color: #596b78;
-    --subtitle-hover-color: #73828c;
+    --subtitle-color: #728a9b;
+    --subtitle-hover-color: #86a2b6;
     --heading-color: #e1e6eb;
     --heading-hover-color: #fff;
     --link-color: #1095c1;
     --link-hover-color: #19b3e6;
+    --button-color: #4f6372;
+    --button-hover-color: #5f788b;
     --main-font-size: 18px;
     --nav-gap: 1.25rem;
     --transition-delay: 0.2s;
     --transition-style: ease-in-out;
     /* Colors from PicoCSS Dark mode */
+    /* 
+    Old subtitle: #596b78
+    Old subtitle hover: #73828c, 
+    */
 }
 
 @font-face {
@@ -206,4 +212,12 @@ p {
     position: absolute !important;
     width: 1px !important;
     white-space: nowrap !important;
-  }
+}
+
+/* Reset heading tags so they can flexibly be used for screen reading */
+h1, h2, h3, h4, h5, h6 {
+    font-size: inherit;
+    font-weight: inherit;
+    margin: 0;
+    padding: 0;
+}

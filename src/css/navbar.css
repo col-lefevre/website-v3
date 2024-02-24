@@ -3,7 +3,7 @@
 }
 
 /* UNIVERSAL  */
-.nav {
+.nav-container {
     display: flex;
     flex-flow: row wrap;
     align-items: center;
@@ -11,12 +11,12 @@
 }
 
 /* MOBILE VS DESKTOP */
-.desktop .nav,
-.tablet .nav {
+.desktop .nav-container,
+.tablet .nav-container {
     margin: 1rem 0rem;
 }
 
-.mobile .nav {
+.mobile .nav-container {
     margin: 0rem;
     height: calc(
         var(--mobile-nav-height) - 1.5px
@@ -42,13 +42,13 @@
 }
 
 .desktop .nav-img {
-    /* width: 30px; */
-    height: 30px;
+    height: 27.5px;
+    width: auto;
 }
 
 .mobile .nav-img {
-    /* width: 25px; */
     height: 25px;
+    width: auto;
 }
 
 .nav-img img {
@@ -57,23 +57,23 @@
 }
 
 /* LINK STYLE*/
-.nav a,
+.nav-container a,
 #popout a {
     color: var(--subtitle-color);
 }
 
-.nav a:hover,
+.nav-container a:hover,
 #popout a {
     color: var(--subtitle-hover-color);
     text-decoration: none;
 }
 
-.nav a.active,
+.nav-container a.active,
 #popout a.active {
     color: var(--heading-color);
 }
 
-.nav a.active:hover,
+.nav-container a.active:hover,
 #popout a.active:hover {
     color: var(--heading-hover-color);
 }
@@ -142,4 +142,16 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
+}
+
+/* ACCESSIBILITY */
+ul,
+li {
+    list-style: none; /* Remove bullets or numbering */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+li {
+    display: inline-block; /* Ensures each list item is tabbable and navigable */
 }

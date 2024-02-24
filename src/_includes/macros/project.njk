@@ -1,7 +1,7 @@
 {% macro button_helper(buttons) %}
     <div class="buttons">
         {% for entry in buttons %}
-            <a class="button {{'disabled' if entry.disabled}}" role="button" href="{{ entry.link | url }}" target="_blank" rel="noopener noreferrer">{{entry.label}}</a>
+            <a class="button {{'disabled' if entry.disabled}}" href="{{ entry.link | url }}" target="_blank" rel="noopener noreferrer">{{entry.label}}</a>
         {% endfor %}
     </div>
 {% endmacro %}
@@ -14,7 +14,9 @@
                 <img loading="lazy" src="{{ '/assets/images/' + img | url }}" class="img-fluid crop-3x2" alt="{{alt}}">
             </div>
             <div class="col-lg-7 offset-1">
-                <div class="h2">{{header}}</div>
+                <h2>
+                    <div class="h2">{{header}}</div>
+                </h2>
                 <div class="subtitle">{{subtitle}}</div>
                 {% for entry in body %}
                     <p>{{entry | safe}}</p>

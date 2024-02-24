@@ -1,12 +1,12 @@
 .button {
     padding: 0.65rem 1rem;
     border-radius: 0.25rem;
-    background-color: var(--subtitle-color);
+    background-color: var(--button-color);
     color: var(--heading-color);
 }
 
 .button:hover {
-    background-color: var(--subtitle-hover-color);
+    background-color: var(--button-hover-color);
     color: var(--heading-hover-color);
     text-decoration: none;
 }
