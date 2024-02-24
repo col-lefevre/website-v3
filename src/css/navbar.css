@@ -65,7 +65,6 @@
 .nav-container a:hover,
 #popout a {
     color: var(--subtitle-hover-color);
-    text-decoration: none;
 }
 
 .nav-container a.active,
