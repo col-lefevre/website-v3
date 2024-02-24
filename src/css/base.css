@@ -25,8 +25,8 @@
 
 @font-face {
     font-family: "OpenSans-Var";
-    src: url("../assets/fonts/OpenSans-VariableFont_wdth,wght.ttf")
-        format("truetype");
+    src: url("../assets/fonts/OpenSans-VariableFont_wdth,wght.ttf") format("truetype");
+    font-display: swap;
 }
 
 html {
