@@ -35,9 +35,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Hide or show mobile navbar on scroll (for viewports less than 576px)
     if (window.innerWidth < 576) {
-        let oldScroll = window.pageYOffset;
+        let oldScroll = window.scrollY;
         window.addEventListener("scroll", function () {
-            const newScroll = window.pageYOffset;
+            const newScroll = window.scrollY;
 
             // Hide on scroll down
             if (
