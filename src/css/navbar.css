@@ -42,13 +42,17 @@
 }
 
 .desktop .nav-img {
+    /* Must specify width for Safari */
+    /* Width manually scaled based on desired height + PNG height */
     height: 27.5px;
-    width: auto;
+    width: calc(calc(278 / 325) * 27.5) px;
 }
 
 .mobile .nav-img {
+    /* Must specify width for Safari */
+    /* Width manually scaled based on desired height + PNG height */
     height: 25px;
-    width: auto;
+    width: calc(calc(278 / 325) * 27.5) px;
 }
 
 .nav-img img {
