@@ -1,6 +1,6 @@
 const htmlMin = require("html-minifier");
-const cssMin = require("clean-css");
-const { minify } = require("terser");
+// const cssMin = require("clean-css");
+// const { minify } = require("terser");
 
 module.exports = function (eleventyConfig) {
     // Add non-default paths
@@ -52,18 +52,18 @@ module.exports = function (eleventyConfig) {
     //     return content;
     // });
 
-    eleventyConfig.addTransform(
-        "minifyCSS",
-        async function (content, outputPath) {
-            if (outputPath && outputPath.endsWith(".css")) {
-                // Minify CSS content
-                const minifiedCSS = new CleanCSS({}).minify(content).styles;
-                return minifiedCSS;
-            }
+    // eleventyConfig.addTransform(
+    //     "minifyCSS",
+    //     async function (content, outputPath) {
+    //         if (outputPath && outputPath.endsWith(".css")) {
+    //             // Minify CSS content
+    //             const minifiedCSS = new CleanCSS({}).minify(content).styles;
+    //             return minifiedCSS;
+    //         }
 
-            return content;
-        }
-    );
+    //         return content;
+    //     }
+    // );
 
     // Minify JS
     // eleventyConfig.addNunjucksAsyncFilter(
