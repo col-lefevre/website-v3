@@ -154,7 +154,8 @@ img {
     object-fit: cover;
 }
 
-.crop-1x1 {
+/* DEPRECATED - Can't get to work on Firefox :( */
+/* .crop-1x1 {
     aspect-ratio: 1 / 1;
 }
 
@@ -168,7 +169,7 @@ img {
 
 .crop-16x9 {
     aspect-ratio: 16 / 9;
-}
+} */
 
 /* MISC */
 p {
