@@ -19,7 +19,7 @@ title: Colin LeFevre
 {# Contact Links #}
 {% macro links() %}
     <div class="icons">
-        <a href="mailto:clefevr@iu.edu" title="Email">{% include "svg/svg-email.njk" %}
+        <a href="mailto:lefevrec@uci.edu" title="Email">{% include "svg/svg-email.njk" %}
             <span class="sr-only">Email</span></a>
         <a href="https://www.linkedin.com/in/colin-lefevre/" title="LinkedIn">{% include "svg/svg-linkedin.njk" %}
             <span class="sr-only">LinkedIn</span></a>
@@ -33,48 +33,48 @@ title: Colin LeFevre
 {# Description Text #}
 {% macro desc() %}
     <div class="desc">
-        <p>I am a Human-Computer Interaction (HCI) researcher at  <a href="https://prohealth.luddy.indiana.edu/">Proactive Health Informatics</a>. I am also an incoming Informatics Ph.D. student and <a href="https://new.nsf.gov/funding/opportunities/nsf-graduate-research-fellowship-program-grfp">NSF Graduate Research Fellow</a> at the University of California, Irvine.</p>
-        <p>My research focuses on designing technologies which support health and wellbeing in everyday settings. At present, I am particularly interested in digital mental health and self-management. My undergraduate research advisor was <a href="http://cfchung.com">Christina Chung</a>, and my Ph.D. interim research advisor will be <a href="https://www.informatics.uci.edu/explore/faculty-profiles/madhu-reddy/">Madhu Reddy</a>.</p>
-        <p>Currently, I am wrapping up undergraduate research projects, preparing to move to California, and generally relaxing.</p>
-    </div>
+        <p>I am a Human-Computer Interaction (HCI) researcher at  <a href="https://prohealth.luddy.indiana.edu/">Proactive Health Informatics</a>. I am an incoming Informatics Ph.D. student and NSF Graduate Research Fellow</a> at the University of California, Irvine.</p>
+    <p>My research focuses on designing technologies which support health and wellbeing in everyday settings. At present, I am particularly interested in digital mental health and self-management. My undergraduate research advisor was <a href="http://cfchung.com">Christina Chung</a>, and my Ph.D. advisor will be <a href="https://www.informatics.uci.edu/explore/faculty-profiles/madhu-reddy/">Madhu Reddy</a>.</p>
+    <p>Currently, I am settling into California, wrapping up some undergraduate projects, and preparing to begin my Ph.D.</p>
+</div>
 {% endmacro %}
 
 {# Desktop Layout #}
 <div class="row desktop">
-    <div class="col-lg-4">
-        <img src="{{ 'assets/images/headshot/2x3.jpg' | url }}" class="img-fluid" alt="Colin LeFevre standing in a forest on a sunny day">
-    </div>
-    <div class="col-lg-7 offset-1">
-        {{ intro() }}
-        {{ links() }}
-        {{ desc() }}
-    </div>
+<div class="col-lg-4">
+    <img src="{{ 'assets/images/headshot/2x3.jpg' | url }}" class="img-fluid" alt="Colin LeFevre standing in a forest on a sunny day">
+</div>
+<div class="col-lg-7 offset-1">
+    {{ intro() }}
+    {{ links() }}
+    {{ desc() }}
+</div>
 </div>
 
 {# Tablet Layout #}
 <div class="row tablet">
-    <div class="col-sm-5">
-        <img src="{{ 'assets/images/headshot/1x1.jpg' | url }}" class="img-fluid" alt="Colin LeFevre standing in a forest on a sunny day">
+<div class="col-sm-5">
+    <img src="{{ 'assets/images/headshot/1x1.jpg' | url }}" class="img-fluid" alt="Colin LeFevre standing in a forest on a sunny day">
+</div>
+<div class="col-sm-6 offset-1">
+    <div class="vertical-center">
+        {{ intro() }}
+        {{ links() }}
     </div>
-    <div class="col-sm-6 offset-1">
-        <div class="vertical-center">
-            {{ intro() }}
-            {{ links() }}
-        </div>
-    </div>
-    <div class="col-sm-12">
-        {{ desc() }}
-    </div>
+</div>
+<div class="col-sm-12">
+    {{ desc() }}
+</div>
 </div>
 
 {# Mobile Layout #}
 <div class="row mobile">
-    <div class="col-12">
-        <img src="{{ 'assets/images/headshot/16x9.jpg' | url }}" class="img-fluid" alt="Colin LeFevre standing in a forest on a sunny day">
-    </div>
-    <div class="col-12">
-        {{ intro() }}
-        {{ links() }}
-        {{ desc() }}
-    </div>
+<div class="col-12">
+    <img src="{{ 'assets/images/headshot/16x9.jpg' | url }}" class="img-fluid" alt="Colin LeFevre standing in a forest on a sunny day">
+</div>
+<div class="col-12">
+    {{ intro() }}
+    {{ links() }}
+    {{ desc() }}
+</div>
 </div>
