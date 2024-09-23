@@ -11,16 +11,6 @@ cssFile: ["project.css", "research.css", "buttons.css"]
 
 {% import "macros/project.njk" as macros %}
 
-{# Cooking Stories #}
-{{ macros.project(
-    header="Digitally Shared Cooking Experiences",
-    subtitle='2021 - Present',
-    body=['In this project, I have contributed to the conceptualization, design, and development of a cultural probe focused on social support for healthy eating. Specifically, the probe investigates the digital sharing of cooking experiences between intergenerational, remote family members. This project is led by <a href="https://aswatipanicker.com/">Aswati Panicker</a> and <a href="http://cfchung.com">Christina Chung</a>.', "Currently, I am focusing on the development of the probe, as well as the design and implementation of an accompanying evaluation study."],
-    img='research/cooking/',
-    alt="sandwich cut in half",
-    buttons=[{label: "ECSCW '22 Poster", link: '/assets/pdfs/ModiEtAl_ECSCW22.pdf'}]
-)}}
-
 {# Reflection and Bereavement #}
 {{ macros.project(
     header='Reflective Technology & Bereavement',
@@ -29,6 +19,16 @@ cssFile: ["project.css", "research.css", "buttons.css"]
     img='research/bereavement/',
     alt="video game controller",
     buttons=[{label: "CHI '24 Paper", link: "/assets/pdfs/LeFevreChung_CHI24.pdf"},{label: "CHI '23 Poster", link: '/assets/pdfs/LeFevreChung_CHI23.pdf'}]
+)}}
+
+{# Cooking Stories #}
+{{ macros.project(
+    header="Digitally Shared Cooking Experiences",
+    subtitle='2021 - 2024',
+    body=['In this project, I have contributed to the conceptualization, design, and development of a cultural probe focused on social support for healthy eating. Specifically, the probe investigates the digital sharing of cooking experiences between intergenerational, remote family members. This project is led by <a href="https://aswatipanicker.com/">Aswati Panicker</a> and <a href="http://cfchung.com">Christina Chung</a>.'],
+    img='research/cooking/',
+    alt="sandwich cut in half",
+    buttons=[{label: "ECSCW '22 Poster", link: '/assets/pdfs/ModiEtAl_ECSCW22.pdf'}]
 )}}
 
 {# Abortion Activism #}
