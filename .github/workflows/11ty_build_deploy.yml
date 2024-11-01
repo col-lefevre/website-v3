@@ -11,7 +11,7 @@ jobs:
             - uses: actions/checkout@master
             - name: Build
               uses: TartanLlama/actions-eleventy@master
-                with:
+              with:
                   install_dependencies: true
 
             - name: Deploy (External Repo)
