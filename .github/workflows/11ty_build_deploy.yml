@@ -1,52 +1,26 @@
-# name: Eleventy Build
-# on:
-#     push:
-#         branches:
-#             - main
-
-# jobs:
-#     build_deploy:
-#         runs-on: ubuntu-latest
-#         steps:
-#             - uses: actions/checkout@master
-#             - name: Build
-#               uses: TartanLlama/actions-eleventy@master
-
-#             # - name: Deploy (Internal Branch)
-#             #   uses: peaceiris/actions-gh-pages@v3
-#             #   with:
-#             #       publish_dir: _site
-#             #       publish_branch: gh-pages
-#             #       github_token: ${{ secrets.REPO_ACCESS_TOKEN }}
-
-#             - name: Deploy (External Repo)
-#               uses: cpina/github-action-push-to-another-repository@main
-#               env:
-#                   API_TOKEN_GITHUB: ${{ secrets.REPO_ACCESS_TOKEN }}
-#               with:
-#                   source-directory: "_site"
-#                   destination-github-username: "col-lefevre"
-#                   destination-repository-name: "col-lefevre.github.io"
-#                   user-email: colin.lefevre.school@gmail.com
-#                   target-branch: main
-#                   install_dependencies: true
-
-name: Test Build
-on: [push]
+name: Eleventy Build
+on:
+    push:
+        branches:
+            - main
 
 jobs:
-    test:
+    build_deploy:
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@master
-            - name: Build 11ty
-              uses: cagov/actions-eleventy@3.1
-              with:
-                  build_task: build:staging
-                  build_eleventy_args: --formats=html,njk --input ./pages --output ./docs
-            - name: Deploy
-              uses: peaceiris/actions-gh-pages@v1.1.0
+            - name: Build
+              uses: TartanLlama/actions-eleventy@master
+                with:
+                  install_dependencies: true
+
+            - name: Deploy (External Repo)
+              uses: cpina/github-action-push-to-another-repository@main
               env:
-                  PUBLISH_DIR: _site
-                  PUBLISH_BRANCH: gh-pages
-                  GITHUB_TOKEN: ${{ secrets.REPO_ACCESS_TOKEN }}
+                  API_TOKEN_GITHUB: ${{ secrets.REPO_ACCESS_TOKEN }}
+              with:
+                  source-directory: "_site"
+                  destination-github-username: "col-lefevre"
+                  destination-repository-name: "col-lefevre.github.io"
+                  user-email: colin.lefevre.school@gmail.com
+                  target-branch: main
