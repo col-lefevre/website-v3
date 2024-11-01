@@ -12,6 +12,12 @@ jobs:
             - name: Build
               uses: TartanLlama/actions-eleventy@master
 
+            # Add Node setup to use version 18
+            - name: Set up Node.js
+              uses: actions/setup-node@v3
+              with:
+                  node-version: 18
+
             # - name: Deploy (Internal Branch)
             #   uses: peaceiris/actions-gh-pages@v3
             #   with:
