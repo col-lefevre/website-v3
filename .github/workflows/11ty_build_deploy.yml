@@ -31,10 +31,8 @@
 #                   target-branch: main
 #                   install_dependencies: true
 
-name:  Eleventy Build
-    push:
-        branches:
-            - main
+name: Test Build
+on: [push]
 
 jobs:
     test:
