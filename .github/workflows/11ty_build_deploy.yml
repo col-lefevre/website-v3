@@ -1,18 +1,67 @@
-name: Eleventy Build
+# name: Eleventy Build
+# on:
+#     push:
+#         branches:
+#             - main
+
+# jobs:
+#     build_deploy:
+#         runs-on: ubuntu-latest
+#         steps:
+#             - uses: actions/checkout@master
+#             - name: Build
+#               uses: TartanLlama/actions-eleventy@master
+#               with:
+#                   install_dependencies: true
+
+#             - name: Deploy (External Repo)
+#               uses: cpina/github-action-push-to-another-repository@main
+#               env:
+#                   API_TOKEN_GITHUB: ${{ secrets.REPO_ACCESS_TOKEN }}
+#               with:
+#                   source-directory: "_site"
+#                   destination-github-username: "col-lefevre"
+#                   destination-repository-name: "col-lefevre.github.io"
+#                   user-email: colin.lefevre.school@gmail.com
+#                   target-branch: main
+
+name: Deploy to GitHub Pages
+
 on:
     push:
         branches:
             - main
+    pull_request:
 
 jobs:
-    build_deploy:
-        runs-on: ubuntu-latest
+    deploy:
+        runs-on: ubuntu-22.04
+        permissions:
+            contents: write
+        concurrency:
+            group: ${{ github.workflow }}-${{ github.ref }}
         steps:
-            - uses: actions/checkout@master
-            - name: Build
-              uses: TartanLlama/actions-eleventy@master
+            - uses: actions/checkout@v3
+
+            - name: Setup Node
+              uses: actions/setup-node@v3
               with:
-                  install_dependencies: true
+                  node-version: "18"
+
+            - name: Persist npm cache
+              uses: actions/cache@v3
+              with:
+                  path: ~/.npm
+                  key: ${{ runner.os }}-node-${{ hashFiles('**/package.json') }}
+
+            - name: Persist Eleventy .cache
+              uses: actions/cache@v3
+              with:
+                  path: ./.cache
+                  key: ${{ runner.os }}-eleventy-fetch-cache
+
+            - run: npm install
+            - run: npm run build-ghpages
 
             - name: Deploy (External Repo)
               uses: cpina/github-action-push-to-another-repository@main
